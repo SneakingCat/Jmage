@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jmage Histogram Display</title>
+  <script type = "text/javascript" src = "histogram_display.js"></script>
+  <script type = "text/javascript" src = "../../js/JmageHistogram.js"></script>
+  <style>
+    body.histogram_display_body {
+    background: black;
+    }
+    div.float {
+    float: left;
+    width: 100px;
+    padding: 8px;
+    background: black;
+    }
+    div.info {
+    color: #871833
+    }
+  </style>
+</head>
+<body class = "histogram_display_body" 
+      onload = "bodyLoaded('eiffeltornet.jpg');">
+
+  <table>
+
+    <tr>
+      <td>
+	<div class = "float">
+	  <canvas id = "histogram_canvas"></canvas>
+	</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<div class = "float">	 
+	  <canvas id = "image_canvas"></canvas>
+	</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<div>
+	  <div class = "float">
+	    <img src = "eiffeltornet.jpg" width = "100px"
+		 onclick = "setupImageAndHistogram('eiffeltornet.jpg');"/>
+	  </div>
+	  <div class = "float">
+	    <img src = "eiffeltornetgrey.jpg" width = "100px"
+		 onclick = "setupImageAndHistogram('eiffeltornetgrey.jpg');"/>
+	  </div>
+	  <div class = "float">
+	    <img src = "eiffeltornetred.jpg" width = "100px"
+		 onclick = "setupImageAndHistogram('eiffeltornetred.jpg');"/>
+	  </div>
+	  <div class = "float">
+	    <img src = "eiffeltornetrot.jpg" width = "100px"
+		 onclick = "setupImageAndHistogram('eiffeltornetrot.jpg');"/>
+	  </div>
+	</div>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class = "info">
+    <p>Click on the thumbnails above for histogram demo</p>
+    <p>Thanks to <a href = "http://www.fotoakuten.se">Fotoakuten</a> for images</p>
+  </div>
+
+</body>
+</html>
